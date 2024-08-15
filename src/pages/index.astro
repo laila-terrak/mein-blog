@@ -1,0 +1,176 @@
+---
+import { getCollection } from "astro:content";
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import ArrowCard from "@components/ArrowCard.astro";
+import Link from "@components/Link.astro";
+import { SITE, HOME, SOCIALS } from "@consts";
+
+const blog = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
+
+const projects = (await getCollection("projects"))
+  .filter((project) => !project.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
+---
+
+<PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
+  <Container>
+    <img
+      src="public/profil-bild.png"
+      alt="mein Profil-bild"
+      class="rounded-full mb-4 w-40 h-40 object-cover"
+    />
+    <h4 class="animate font-semibold text-black dark:text-white">
+      Hallo! Ich bin Laila Terrak<span class="text-xl">👋🏻</span>
+    </h4>
+    <div class="space-y-16">
+      <section>
+        <article class="space-y-4">
+          <p class="animate">
+            Willkommen auf meiner Internetseite!
+            <br />
+            Ich heiße Laila Terrak und wohne in Hannover, ich habe einen Bachelor-Abschluss
+            in Elektrotechnik und interessiere mich für Web-Entwicklung. Als ich
+            in Marokko Elektrotechnik studiert habe, hat mich meine Leidenschaft
+            für Technologie in die spannende Welt der Webentwicklung geführt.
+          </p>
+          <p class="animate">
+            Als Junior Developerin möchte ich mein technisches Wissen mit
+            modernen Webtechnologien verbinden, um innovative und effiziente
+            digitale Lösungen zu schaffen.
+          </p>
+          <p class="animate">
+            Begleiten Sie mich auf meiner Reise und entdecken Sie meine Projekte
+            und <Link href="/blog"> Blog-Posts</Link>, während ich meine
+            Fähigkeiten weiter ausbaue. Lassen Sie uns gemeinsam etwas
+            Großartiges schaffen!
+          </p>
+        </article>
+      </section>
+      <section class="animate space-y-4">
+        <h5 class="font-semibold text-black dark:text-white">Was ich kann.</h5>
+        <div class="flex gap-4">
+          <img
+            src="public/html.jpeg"
+            alt="html logo"
+            class="mb-4 w-12 h-12 object-cover"
+          />
+          <img
+            src="public/css.png"
+            alt="css logo"
+            class="mb-4 w-12 h-12 object-cover"
+          />
+          <img
+            src="public/js.png"
+            alt="js logo"
+            class="mb-4 w-12 h-12 object-cover"
+          />
+          <img
+            src="public/git.png"
+            alt="git logo"
+            class="mb-4 w-26 h-12 object-cover"
+          />
+          <img
+            src="public/tailwind.jpeg"
+            alt="tailwind logo"
+            class="mb-4 w-12 h-12 object-cover"
+          />
+          <img
+            src="public/astro.png"
+            alt="astro logo"
+            class="mb-4 w-12 h-12 object-cover"
+          />
+        </div>
+        <h5 class="font-semibold text-black dark:text-white">
+          Was ich aktuell lerne.
+        </h5>
+        <div class="flex gap-4">
+          <img
+            src="public/react.png"
+            alt="react logo"
+            class="mb-4 w-12 h-12 object-cover"
+          />
+          <img
+            src="public/java.png"
+            alt="java logo"
+            class="mb-4 w-12 h-12 object-cover"
+          />
+        </div>
+      </section>
+      <section class="animate space-y-4">
+        <h5 class="font-semibold text-black dark:text-white">Kontakt</h5>
+        <article>
+          <p>
+            Falls Sie mich erreichen oder einfach nur Hallo sagen möchten,
+            können Sie mir gerne über die sozialen Medien schreiben oder eine
+            E-Mail senden.
+          </p>
+        </article>
+        <ul class="flex flex-wrap gap-2">
+          {
+            SOCIALS.map((SOCIAL) => (
+              <li class="flex gap-x-2 text-nowrap">
+                <Link
+                  href={SOCIAL.HREF}
+                  external
+                  aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}
+                >
+                  {SOCIAL.NAME}
+                </Link>
+                {"/"}
+              </li>
+            ))
+          }
+          <li class="line-clamp-1">
+            <Link
+              href={`mailto:${SITE.EMAIL}`}
+              aria-label={`Email ${SITE.NAME}`}
+            >
+              {SITE.EMAIL}
+            </Link>
+          </li>
+        </ul>
+      </section>
+
+      <section class="animate space-y-6">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Aktuelle Posts
+          </h5>
+          <Link href="/blog"> Alle Beiträge ansehen </Link>
+        </div>
+        <ul class="flex flex-col gap-4">
+          {
+            blog.map((post) => (
+              <li>
+                <ArrowCard entry={post} />
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <!-- <section class="animate space-y-6">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Recent projects
+          </h5>
+          <Link href="/projects"> See all projects </Link>
+        </div>
+        <ul class="flex flex-col gap-4">
+          {
+            projects.map((project) => (
+              <li>
+                <ArrowCard entry={project} />
+              </li>
+            ))
+          }
+        </ul>
+      </section> -->
+    </div>
+  </Container>
+</PageLayout>
