@@ -1,5 +1,5 @@
 ---
-date: "01/08/2024"
+date: "08/01/2024"
 title: "Wie baut man ein Accordion mit JavaScript und Tailwind CSS"
 description: "Erstelle ein interaktives Accordion mit HTML, Tailwind CSS und JavaScript. Schritt-für-Schritt-Anleitung für Webentwickler zur Gestaltung und Funktionalität eines modernen Accordions auf deiner Webseite."
 heroImage:
