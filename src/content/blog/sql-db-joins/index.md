@@ -21,7 +21,7 @@ Ein einfaches Beispiel wie die Einkaufsliste zeigt uns, wie eine kleine Menge an
 
 Wenn wir für jede Person ein eigenes Blatt Papier benötigen und 1000 Studierende oder Kunden haben, würden wir mit 1000 Blättern arbeiten. Das führt schnell dazu, dass wir den Überblick verlieren. Wenn wir die Daten aktualisieren müssen, ist es ein sehr aufwendiger Prozess, die Daten auf jedem einzelnen Blatt zu ändern. Eine Datenbank löst dieses Problem, indem sie alle Daten zentral speichert und eine einfache Möglichkeit bietet, Informationen zu suchen, zu ändern oder hinzuzufügen, ohne jedes Blatt einzeln bearbeiten zu müssen.
 
-Da untere Bild zeigt ein Beispiel von einer Tabelle in einer Datenbank für Studenten:
+Das untere Bild zeigt ein Beispiel von einer Tabelle in einer Datenbank für Studenten:
 
 ![Tabelle in einer Datenbank](/Beispiel-einer-Tabelle-in-einer-Datenbank.jpeg)
 
