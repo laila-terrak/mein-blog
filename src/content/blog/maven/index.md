@@ -2,9 +2,7 @@
 date: "12/30/2024"
 title: "Maven für Java-Projekte: Einführung und Anwendung"
 description: "Maven ist ein leistungsstarkes Build-Tool für Java-Projekte. In diesem Beitrag zeigen wir, wie es funktioniert und wofür es verwendet wird."
-heroImage:
-  src: "/accordion-post.png"
-  alt: "fertige Accordion Kompenente"
+
 ---
 # Was ist Maven?
 
