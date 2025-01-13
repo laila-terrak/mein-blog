@@ -1,7 +1,7 @@
 ---
-date: "12/30/2024"
+date: "01/13/2024"
 title: "Wie ich beinahe mein gesamtes Projekt verloren hätte"
-description: "Maven ist ein leistungsstarkes Build-Tool für Java-Projekte. In diesem Beitrag zeigen wir, wie es funktioniert und wofür es verwendet wird."
+description: "Ein Erfahrungsbericht darüber, wie ein kleiner Fehler im Umgang mit Git beinahe zur Katastrophe geführt hat – und was ich daraus gelernt habe."
 
 ---
 ### Was habe ich versucht zu schaffen?
