@@ -1,5 +1,5 @@
 ---
-date: "01/13/2024"
+date: "01/13/2025"
 title: "Wie ich beinahe mein gesamtes Projekt verloren hätte"
 description: "Ein Erfahrungsbericht darüber, wie ein kleiner Fehler im Umgang mit Git beinahe zur Katastrophe geführt hat – und was ich daraus gelernt habe."
 
