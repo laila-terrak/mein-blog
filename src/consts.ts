@@ -18,6 +18,12 @@ export const BLOG: Metadata = {
     "Meine Blog Posts mit Ideen und Sachen die ich lerne und gelernt habe",
 };
 
+export const NOTES: Metadata = {
+  TITLE: "Notes",
+  DESCRIPTION:
+     "Sammlung meiner wichtigsten Notizen, Ideen und Erkenntnisse, die für mich von Bedeutung sind.",
+};
+
 export const PROJECTS: Metadata = {
   TITLE: "Projekte",
   DESCRIPTION: "Hier finden Sie meine Projekte",
