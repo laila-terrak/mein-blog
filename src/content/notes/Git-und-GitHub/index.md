@@ -1,5 +1,5 @@
 ---
-date: "08/01/2024"
+date: "10/13/2024"
 title: "Git und GitHub"
 description: ""
 heroImage:
