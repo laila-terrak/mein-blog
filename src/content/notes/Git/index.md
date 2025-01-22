@@ -1,22 +1,18 @@
 ---
 date: "10/13/2024"
-title: "Git und GitHub"
-description: ""
+title: "Git"
+description: "In dieser Notiz erkläre ich was Git ist"
 heroImage:
   src: ""
   alt: ""
 ---
-# was ist Git und GitHub?
-
-Git und GitHub sind nicht dasselbe. Viele Entwickler denken jedoch fälschlicherweise, dass sie identisch sind. 
-## 1.Git:
-### 1.1.Was ist Git?
+# was ist Git? 
 
 Git ist eine ***Software***, die auf dem Computer installiert werden muss. Auf vielen macOS- und Linux-Systemen ist Git jedoch oft schon vorinstalliert. 
 Git ist ein ***Versionskontrollsystem***. Es speichert nicht nur die Projekte, sondern verfolgt auch jede Änderung, die man macht. Dadurch kann man jederzeit zu früheren Versionen zurückkehren oder Änderungen vergleichen.
 alle Änderungen und Versionen werden  standardmäßig **lokal auf dem Computer** gespeichert. Niemand hat Zugriff darauf, außer der user selbst.
 
-### 1.2.Überprüfen, ob Git installiert ist
+# Überprüfen, ob Git installiert ist
 
 Um zu überprüfen, ob **Git** auf dem Computer installiert ist, kann man im Terminal den folgenden Befehl eingeben:
 
@@ -36,7 +32,7 @@ Wenn Git nicht installiert ist, wird eine Ausgabe angezeigt, die etwa so aussieh
  git: command not found
 ```
 
-### 1.3.Git-Konfiguration:
+# Git-Konfiguration:
 
 Die **Git-Konfiguration** ermöglicht es uns, Git auf unseren persönlichen Bedarf einzustellen, wie zum Beispiel den Namen und die E-Mail-Adresse, die mit unseren Commits (Änderungen) verknüpft werden. Um Git richtig zu konfigurieren, müssen folgende Schritte durchgeführt werden:
 

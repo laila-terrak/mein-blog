@@ -3,7 +3,7 @@ date: "08/01/2024"
 title: "Wie baut man ein Accordion mit JavaScript und Tailwind CSS"
 description: "Erstelle ein interaktives Accordion mit HTML, Tailwind CSS und JavaScript. Schritt-für-Schritt-Anleitung für Webentwickler zur Gestaltung und Funktionalität eines modernen Accordions auf deiner Webseite."
 heroImage:
-  src: "/accordion-post.png"
+  src: "/images/accordion-post.png"
   alt: "fertige Accordion Kompenente"
 ---
 
@@ -19,20 +19,17 @@ Ein Accordion ist ein Element auf einer Webseite, das Inhalte ein- und ausklappe
 
 Zunächst erstellen wir eine Section, die als äußerer Container für unser Accordion dient. Dieser Container umfasst den gesamten Inhalt des Accordions und trägt dazu bei, eine saubere HTML-Struktur zu gewährleisten.
 
-```ts
-// html
-
+```html
+<!--html -->
 <section>
   <!-- Accordion Elemente kommen hierhin -->
 </section>
-
 ```
 
 Danach erstellen wir für jedes Accordion-Element einen `<div>`, der als Container für den Titel, das Plus-Symbol (den anklickbaren Teil) und den Inhalt (der ein- und ausgeklappt wird) dient.
 
-```ts
-// html
-
+```html
+<!--html -->
 <section >
   <div>
     <!-- Titel und Inhalt kommen hierhin -->
@@ -44,14 +41,12 @@ Danach erstellen wir für jedes Accordion-Element einen `<div>`, der als Contain
     <!-- Titel und Inhalt kommen hierhin -->
   </div>
 </section>
-
 ```
 
 Im nächsten Schritt erstellen wir ein `<button>`-Element, der den Titel und das Plus-Symbol umfasst. Der Button wird verwendet, um den Inhalt ein- und auszuklappen.
 
-```ts
-// html
-
+```html
+<!--html -->
 <section>
   <div>
     <button></button>
@@ -59,9 +54,8 @@ Im nächsten Schritt erstellen wir ein `<button>`-Element, der den Titel und das
 </section>
 ```
 
-```ts
-// html
-
+```html
+<!--html -->
 <section>
   <div>
     <button>
@@ -82,9 +76,8 @@ Im nächsten Schritt erstellen wir ein `<button>`-Element, der den Titel und das
 
 Zum Schluss erstellen wir einen `<div>`,der den Inhalt des Accordions enthält, der ein- und ausgeblendet wird.
 
-```ts
-// html
-
+```html
+<!--html -->
 <section>
   <div>
     <button></button>
@@ -106,8 +99,8 @@ Zum Schluss erstellen wir einen `<div>`,der den Inhalt des Accordions enthält, 
 
 Um das gesamte Accordion zu erstellen, reicht es aus, den gesamten Inhalt des ersten `<div>`-Elements zu kopieren. Hier ist eine Übersicht, wie der vollständige Code am Ende aussehen wird:
 
-```ts
-// html
+```html
+<!--html -->
 <section>
   <div>
     <button>
@@ -197,13 +190,12 @@ Um das gesamte Accordion zu erstellen, reicht es aus, den gesamten Inhalt des er
 
 Ohne Tailwind CSS, wird unser Accordion so aussehen:
 
-![Accordion ohne CSS](/accordion-ohne-css.png)
+![Accordion ohne CSS](./public/images/accordion-ohne-css.png)
 
 Mit Tailwind CSS können wir das Accordion einfach und effizient stylen. Hier einige der wichtigen Klassen, die wir verwenden:
 
-```ts
-// html
-
+```html
+<!--html -->
 <section class="mx-20 px-4 py-20 flex flex-col gap-3">
 <!-- Accordion Elemente kommen hierhin -->
 </section>
@@ -215,9 +207,8 @@ flex: aktiviert das Flexbox-Layout für das `<section>` Element.
 flex-col: Die Elemente werden vertikal angeordnet, d.sh. die Flex-Items werden untereinander gestapelt.
 gap-3: fügt einen gleichmäßigen Abstand von 12 px zwischen den Flex-Items im Container hinzu.
 
-```ts
-// html
-
+```html
+<!--html -->
 <section class="mx-20 px-4 py-20 flex flex-col gap-3">
   <div class="py-4 px-6 border border-laser-500 rounded-2xl"></div>
 </section>
@@ -228,9 +219,8 @@ border: fügt dem `<div>` Element eine standardmäßige 1px breite Umrandung (Bo
 border-laser-500: bestimmt die Farbe der Umrandung. In diesem Fall handelt es sich um eine benutzerdefinierte Farbe.
 rounded-2xl: Die Ecken des Elements werden stark abgerundet, was dem Design ein weicheres, moderneres Aussehen verleiht.
 
-```ts
-// html
-
+```html
+<!--html -->
 <section class="mx-20 px-4 py-20 flex flex-col gap-3">
   <div class="py-4 px-6 border border-laser-500 rounded-2xl">
     <button class="accordion-btn w-full flex flex-row justify-between items-center text-xl font-bold"></button>
@@ -246,9 +236,8 @@ items-center: Diese Klasse richtet die Elemente innerhalb des Buttons vertikal z
 text-xl: Diese Klasse setzt die Schriftgröße des Textes auf 20 px.
 font-bold: Diese Klasse macht den Text fett, was die Lesbarkeit verbessert und den Button optisch hervorhebt.
 
-```ts
-// html
-
+```html
+<!--html -->
 <section class="mx-20 px-4 py-20 flex flex-col gap-3">
   <div class="py-4 px-6 border border-laser-500 rounded-2xl">
     <button class="accordion-btn w-full flex flex-row justify-between items-center text-xl font-bold">
@@ -268,9 +257,8 @@ font-bold: Diese Klasse macht den Text fett, was die Lesbarkeit verbessert und d
 accordion-icon: Diese Klasse dient dazu, das Icon im JavaScript-Code gezielt anzusprechen. Dadurch können wir das Icon später seinen Zustand (z.B. gedreht oder normal) abhängig von der Accordion-Interaktion verändern.
 text-2xl: Diese Klasse bestimmt die Größe des Icons. Sie setzt die Schriftgröße auf 24px. Da Icons in SVG-Form als Text behandelt werden, beeinflusst diese Klasse direkt die Größe des Icons, sodass es im Accordion-Button gut sichtbar ist.
 
-```ts
-// html
-
+```html
+<!--html -->
 <section class="mx-20 px-4 py-20 flex flex-col gap-3">
   <div class="py-4 px-6 border border-laser-500 rounded-2xl">
     <button class="accordion-btn w-full flex flex-row justify-between items-center text-xl font-bold">
@@ -311,21 +299,21 @@ Damit unser Accordion funktioniert, müssen wir JavaScript hinzufügen, um den I
 
 Zuerst müssen wir auf alle Buttons zugreifen, die das Accordion steuern. Dazu verwenden wir die querySelectorAll()-Methode, die alle Elemente mit einer bestimmten CSS-Klasse zurückgibt. Um alle Buttons mit der Klasse accordion-btn zu erfassen, deklarieren wir eine Variable namens accordionButtons und speichern darin das Ergebnis von querySelectorAll():
 
-```ts
+```js
 // javaScript
 const accordionButtons = document.querySelectorAll(".accordion-btn");
 ```
 
 Auf ähnliche Weise greifen wir auf unsere Icons zu, damit wir sie bei Bedarf drehen können. Wir speichern die Icons in einer Variable namens accordionIcons:
 
-```ts
+```js
 // javaScript
 const accordionIcons = document.querySelectorAll(".accordion-icon");
 ```
 
 Schließlich müssen wir auch die Container erfassen, die den ein- und ausblendbaren Inhalt des Accordions enthalten. Wir verwenden erneut querySelectorAll() und speichern die Container in einer Variablen namens accordionContents:
 
-```ts
+```js
 // javaScript
 const accordionContents = document.querySelectorAll(".accordion-content");
 ```
@@ -334,7 +322,7 @@ Jetzt, da wir Zugriff auf alle benötigten Elemente haben, können wir mit der I
 
 wir verwenden die `forEach()`-Methode, die jedes Element in der `accordionButtons`-Liste durchläuft.
 
-```ts
+```js
 accordionButtons.forEach((btn, index) => {});
 ```
 
@@ -345,7 +333,7 @@ accordionButtons.forEach((btn, index) => {});
 
 Für jeden Button (`btn`) wird ein Event Listener hinzugefügt, der auf das click-Ereignis wartet.
 
-```ts
+```js
 accordionButtons.forEach((btn, index) => {
   btn.addEventListener("click", () => {});
 });
@@ -353,7 +341,7 @@ accordionButtons.forEach((btn, index) => {
 
 Wenn der Button geklickt wird, wird die Funktion im Inneren des Event Listeners aufgerufen, die dafür sorgt, den Content ein und auszublenden.
 
-```ts
+```js
 accordionButtons.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     toggleAccordion(index);
@@ -365,7 +353,7 @@ Die Funktion erhält den `ìndex` des geklickten Button als Parameter. Der index
 
 Die `toggleAccordion`Funktion, die mit dem addEventListener aufgerufen wird, muss irgendwo deklariert sein sonst ist sie nicht aufrufbar. Das machen wir, indem wir die Funktion so deklarieren:
 
-```ts
+```js
 // javaScript
 function toggleAccordion(index) {
   // Hier wird später die Logik hinzugefügt, um den Inhalt ein- oder auszublenden
@@ -376,7 +364,7 @@ In einem früheren Schritt haben wir unsere Icons ausgewählt und in der Variabl
 
 Wie bei IccordionButtons werden wir the `forEach()`Methode verwenden, um durch jedes Element in der `accordionIcons`Liste zu itterieren.
 
-```ts
+```js
 // javaScript
 function toggleAccordion(index) {
   accordionIcons.forEach((icon, i) => {
@@ -394,7 +382,7 @@ Die Verdrehung der Icons können wir erreichen, indem wir
 `icon.classList.toggle("rotate-45")` Methode verwenden.Wenn das icon-Element nicht die Klasse "rotate-45" hat, wird die Klasse hinzugefügt, und das Icon könnte dann z. B. um 45 Grad gedreht werden.
 Wenn das icon-Element bereits die Klasse "rotate-45" hat, wird die Klasse entfernt, und das Icon würde in seinen ursprünglichen Zustand zurückkehren.
 
-```ts
+```js
 // javaScript
 function toggleAccordion(index) {
   accordionIcons.forEach((icon, i) => {
@@ -405,14 +393,9 @@ function toggleAccordion(index) {
 
 Die oben beschriebene Logik funktioniert problemlos, solange wir zuerst den ersten Button klicken. Wenn wir jedoch stattdessen den zweiten Button klicken, stellen wir fest, dass sich das Icon des ersten Buttons ebenfalls mitdreht. Dasselbe Problem tritt auf, wenn wir den dritten Button klicken.
 
-```ts
-// javaScript
-// Hier kommt das Video BZW. GIF
-```
-
 Das Problem können wir beheben, indem wir eine if-Bedingung verwenden, die zuerst überprüft, ob der Index des Buttons genau mit dem Index (i) des Icons übereinstimmt. Wenn diese Bedingung wahr ist, darf das Icon gedreht werden.
 
-```ts
+```js
 // javaScript
 function toggleAccordion(index) {
       accordionIcons.forEach((icon, i) => {
@@ -425,7 +408,7 @@ function toggleAccordion(index) {
 jetzt müssen wir nur noch den Content des geklickten Buttons anzeigen. Dafür benötigen wir die Variable `accordionContents`, die wir in einem früheren Schritt erstellt haben.
 Wie bei `accordionButtons` und `accordionIcons` werden wir auch hier die `forEach()`Methode verwenden, um durch jedes Element in der `accordionContents`Liste zu itterieren.
 
-```ts
+```js
 // javaScript
 accordionContents.forEach((content, i) => {
   // Hier wird später die Logik hinzugefügt, um die Contents anzuzeigen.
@@ -439,7 +422,7 @@ Die Arrow-Funktion `(content, i) => {}` wird für jedes Element in `accordionCon
 
 Die Anzeige des Inhalts können wir erreichen, indem wir die Methode `content.classList.toggle("hidden")` verwenden. Wenn das Content-Element nicht die Klasse "hidden" hat, wird die Klasse hinzugefügt, und der Inhalt wird ausgeblendet. Wenn das Content-Element bereits die Klasse "hidden" hat, wird die Klasse entfernt, und der Inhalt wird angezeigt.
 
-```ts
+```js
 // javaScript
 accordionContents.forEach((content, i) => {
   content.classList.toggle("hidden");
@@ -448,14 +431,9 @@ accordionContents.forEach((content, i) => {
 
 Das Problem bei diesem Code ist, dass beim Versuch, den Inhalt eines Buttons anzuzeigen, auch die Inhalte der anderen Buttons angezeigt werden.
 
-```ts
-// javaScript
-// hier kommt ein Video von dem Problem
-```
-
 Dieses Problem können wir beheben, indem wir eine if-Bedingung verwenden, die zunächst überprüft, ob der Index des Buttons mit dem Index des Inhalts übereinstimmt. Wenn diese Bedingung erfüllt ist, wird nur der entsprechende Inhalt angezeigt.
 
-```ts
+```js
 accordionContents.forEach((content, i) => {
   if (i === index) {
     content.classList.toggle("hidden");
@@ -467,13 +445,9 @@ Unser Accordion funktioniert soweit gut, es gibt jedoch eine Kleinigkeit, die wi
 
 Aktuell verhält es sich so:
 
-```ts
-// hier kommt das GIF
-```
-
 Das Können wir erreichen indem wir eine `else`Bedingung erstellen, die überprüft,ob der Index des Buttons mit dem Index des Inhalts nicht übereinstimmt. Wenn diese Bedingung erfüllt ist,bleibt der entsprechende Inhalt verborgen.
 
-```ts
+```js
 else {
           content.classList.add("hidden");
         }
@@ -481,7 +455,7 @@ else {
 
 Hier finden Sie den vollständigen Code noch einmal zur Ansicht:
 
-```ts
+```js
 // javaScript
 const accordionButtons = document.querySelectorAll(".accordion-btn");
 const accordionIcons = document.querySelectorAll(".accordion-icon");
