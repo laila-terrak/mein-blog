@@ -23,7 +23,7 @@ Wenn wir für jede Person ein eigenes Blatt Papier benötigen und 1000 Studieren
 
 Das untere Bild zeigt ein Beispiel von einer Tabelle in einer Datenbank für ***Studenten***:
 
-![Studenten Tabelle in der Datenbank](./public/images/Beispiel-einer-Tabelle-in-einer-Datenbank.jpeg)
+![Studenten Tabelle in der Datenbank](/images/Beispiel-einer-Tabelle-in-einer-Datenbank.jpeg)
 
 # Was ist SQL?
 
@@ -113,11 +113,11 @@ Durch diese CRUD-Operationen ermöglicht SQL eine vollständige Verwaltung von D
 Nehmen wir an, dass wir in unserer Datenbank zwei weitere Tabellen haben:
 1. Eine 'Kurse'-Tabelle, die die verschiedenen angebotenen Kurse beschreibt.
 
-![Kurse Tabelle in der Datenbank](./public/images/kurse-tabelle.png)
+![Kurse Tabelle in der Datenbank](/images/kurse-tabelle.png)
 
 2. Die 'StudentenKurse'-Tabelle, die  die Zuordnung zwischen Studenten und Kursen darstellt  und zeigt, welcher Student welchen Kurs belegt. Sie bildet somit die n:m-Beziehung zwischen den beiden Tabellen ab.
 
-![StudentenKurse Tabelle in der Datenbank](./public/images/studenten-kurse-tabelle.png)
+![StudentenKurse Tabelle in der Datenbank](/images/studenten-kurse-tabelle.png)
 
 Nehmen wir an, wir möchten den vollständigen Namen, das Geburtsdatum, den Kursnamen und die Leistungspunkte des Studenten mit der ID 1 ermitteln. Zwar könnte man manuell nach der ID suchen und die gewünschten Daten aus der Tabelle 'Studenten' sowie der Tabelle 'Kurse' entnehmen, doch das ist mühsam und unübersichtlich – insbesondere, wenn viele Daten mit komplexeren, automatisch generierten IDs vorliegen. Hier kommen ***Joins*** ins Spiel.
 
@@ -146,7 +146,7 @@ INNER JOIN
 ```
 
 In einem Venn-Diagramm würde das ganze in etwa so aussehen.
-![inner join](./public/images/inner-join.png)
+![inner join](/images/inner-join.png)
 ### LEFT JOIN (oder LEFT OUTER JOIN):
 
 Der **LEFT JOIN** gibt alle Datensätze der linken Tabelle zurück, auch wenn es in der rechten Tabelle keine Übereinstimmungen gibt. Fehlt eine Übereinstimmung, werden die Werte der rechten Tabelle auf `NULL` gesetzt
@@ -169,7 +169,7 @@ LEFT JOIN
 ```
 
 In einem Venn-Diagramm würde das ganze in etwa so aussehen.
-![left join](./public/images/left-join.png)
+![left join](/images/left-join.png)
 ### RIGHT JOIN (oder RIGHT OUTER JOIN):
 
 Der **RIGHT JOIN** gibt alle Datensätze der rechten Tabelle zurück, auch wenn es in der rechten Tabelle keine Übereinstimmungen gibt. Fehlt eine Übereinstimmung, werden die Werte der rechten Tabelle auf `NULL` gesetzt
@@ -191,7 +191,7 @@ RIGHT JOIN
 ```
 
 In einem Venn-Diagramm würde das ganze in etwa so aussehen.
-![right join](./public/images/right-join.png)
+![right join](/images/right-join.png)
 ### FULL OUTER JOIN:
 
 Der **FULL OUTER JOIN** ist eine Kombination aus dem **LEFT** und **RIGHT JOIN**.
@@ -215,4 +215,4 @@ FULL OUTER JOIN
 ```
 
 In einem Venn-Diagramm würde das ganze in etwa so aussehen.
-![full join](./public/images/full-join.png)
+![full join](/images/full-join.png)

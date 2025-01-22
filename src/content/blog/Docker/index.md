@@ -92,7 +92,7 @@ Wenn man auch **stoppte** Container sehen möchte, kann man den Befehl `docker p
 
 ### Beispiel einer YAML-Datei:
 
-![Docker Compose Yaml datei](./public/images/docker-compose-yaml-datei.png)
+![Docker Compose Yaml datei](/images/docker-compose-yaml-datei.png)
 
 Hier wird wird ein PostgreSQL-Datenbank-Service definiert. Dabei wird die PostgreSQL-Version 15 aus dem Docker Hub heruntergeladen (gepullt), sobald der Befehl docker-compose up ausgeführt wird.
 
@@ -102,9 +102,9 @@ Der Befehl `docker-compose up` startet alle Container basierend auf der Konfigur
  docker-compose up
 ```
 
-![docker-compose up](./public/images/docker-compose-up.png)
+![docker-compose up](/images/docker-compose-up.png)
 
-![laufende Container](./public/images/laufende-container.png)
+![laufende Container](/images/laufende-container.png)
 
 Der Befehl `docker-compose down` stoppt und entfernt alle gestarteten Container, Netzwerke und Volumes.
 

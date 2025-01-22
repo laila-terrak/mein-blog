@@ -17,7 +17,7 @@ Maven hilft uns, das Java-Projekt in einer **festgelegten Struktur** zu organisi
 Dadurch wird das Projekt übersichtlich, und man weiß immer, wo was hingehört.
 
 ***Beispiel*** einer Projektstruktur mit Maven:
-![Projekt Struktur](./public/images/maven-projekt-struktur.png)
+![Projekt Struktur](/images/maven-projekt-struktur.png)
 
 ## ***2. Abhängigkeiten (Dependencies) :***
 
@@ -26,7 +26,7 @@ Mit Maven reicht es, in der Datei **pom.xml** (pom steht für Project Object Mod
 
 ***Beispiel*** einer pom.xml Datei in Maven:
 
-![Projekt Struktur](./public/images/pom.xml-datei.png)
+![Projekt Struktur](/images/pom.xml-datei.png)
 
 ***Beispiel*** von einer ***dependency*** in Maven:
 
@@ -47,7 +47,7 @@ Die erste Möglichkeit ist der grüne 'Run'-Button oben rechts in ***IntelliJ***
 Die zweite Möglichkeit ist der Maven-Befehl `./mvnw spring-boot:run` im Terminal.
 Wenn Sie eine der oben genannten Methoden durchführen, sollten Ihnen folgende Ergebnisse angezeigt werden:
 
-![Projekt Struktur](./public/images/run-projekt.png)
+![Projekt Struktur](/images/run-projekt.png)
 ### Bauen (build):
 Um das Projekt zu bauen, müssen wir über das Terminal zu unserem Projektverzeichnis navigieren. Anschließend bauen und packen wir das Projekt mit dem folgenden Maven-Befehl. Dieser kompiliert den Code, führt Tests aus und erstellt eine JAR-Datei im 'target'-Ordner.
 

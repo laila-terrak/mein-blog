@@ -190,7 +190,7 @@ Um das gesamte Accordion zu erstellen, reicht es aus, den gesamten Inhalt des er
 
 Ohne Tailwind CSS, wird unser Accordion so aussehen:
 
-![Accordion ohne CSS](./public/images/accordion-ohne-css.png)
+![Accordion ohne CSS](/images/accordion-ohne-css.png)
 
 Mit Tailwind CSS können wir das Accordion einfach und effizient stylen. Hier einige der wichtigen Klassen, die wir verwenden:
 

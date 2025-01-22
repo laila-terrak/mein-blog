@@ -6,7 +6,7 @@ description: "Ein Erfahrungsbericht darüber, wie ein kleiner Fehler im Umgang m
 ---
 ### Was habe ich versucht zu schaffen?
 Am Anfang meines Projekts habe ich mich auf das Backend konzentriert und ein Repository namens `cleaning-crm` erstellt. Danach habe ich mit Vite und React einen Frontend-Ordner innerhalb des Backend-Ordners angelegt. Soweit so gut, bis ich versucht habe, den Frontend-Ordner in das bestehende Repository zu pushen. Dabei stieß ich jedoch auf folgenden Fehler:  
-![Fehler beim pushen](./public/images/fehler-beim-pushen.png)
+![Fehler beim pushen](/images/fehler-beim-pushen.png)
 Nachdem ich mich schlau gemacht habe und diverse Google-Tipps gelesen habe, um das Problem zu lösen, entschiede ich mich für den Befehl  `git push -f origin main` Doch dabei habe ich einen entscheidenden Fehler gemacht:
 
 **Was ist passiert**
@@ -20,7 +20,7 @@ Im von Vite erstellten Frontend-Ordner habe ich versehentlich erneut `git init` 
     Im Frontend-Ordner habe ich mit dem Befehl `rm -rf .git` die unnötige Git-Initialisierung entfernt.
 2. **Fehlerhaften Commit rückgängig machen:**  
     Mit `git log` habe ich die Liste der Commits angesehen und den fehlerhaften Commit identifiziert.  
-    ![git log](./public/images/git-log.png)
+    ![git log](/images/git-log.png)
     
     Anschließend habe ich den fehlerhaften Commit mit `git revert <commit-hash>` rückgängig gemacht.
 3. **Neuer Commit und Push:**  
